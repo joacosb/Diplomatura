@@ -1,0 +1,39 @@
+h1{
+    color: red; /* comentario en CSS*/
+    font-family: Arial;  /*cambia la tipo*/
+    background-color: green; /*fondo*/
+}
+
+h2{
+
+color: green;
+font-size: 30px;
+}
+
+p{
+    color: blue;
+    font-size: 18 px;
+}
+
+.destacados{
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+}
+/* Si queremos modificar solo un parrafo por ejemplo, deemos usar diferentes tipos de selectores --> SPAN*/
+
+#rojo{
+    background-color: red;
+    width: 300px;
+    height: 300 px;
+    border: 5px solid black; 
+    /*border y padding hace que crezcan de su tamaño natural, en este caso los 300 px, le pondremos:*/
+    box-sizing: border-box;
+    margin-left: 100 px;
+}
+
+#azul{
+    background-color: blue;
+    width: 300px;
+    height: 300 px;
+}
