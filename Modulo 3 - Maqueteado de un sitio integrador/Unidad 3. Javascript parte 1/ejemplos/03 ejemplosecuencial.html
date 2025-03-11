@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ejemplo estructura secuencial en javascript</title>
+</head>
+
+<body>
+
+  <script>
+    const valor1 = prompt('Ingrese primer número:', '');
+    const valor2 = prompt('Ingrese segundo número', '');
+
+    // Como lo que queremos sumar son numeros, debemos transfrmar la informacion en int usando parseInt(valores), caso contrario, solamente haremos una concatenacion. 
+    const suma = parseInt(valor1) + parseInt(valor2);
+
+    const producto = valor1 * valor2;
+
+    console.log('La suma es ' + suma)
+    // usando el + suma concateno los valores
+    // usando las comillas invertidas y el ${} puedo hacer la polarizacion de variables.
+    console.log(`La suma es ${suma} y el producto es ${producto}`)
+    document.write(`La suma es ${suma} y el producto es ${producto}`)
+
+</script>
+  
+</body>
+</html>

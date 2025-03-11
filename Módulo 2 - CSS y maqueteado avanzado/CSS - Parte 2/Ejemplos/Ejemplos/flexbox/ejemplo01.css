@@ -1,0 +1,14 @@
+.contenedor{
+	background-color: blue;
+	display: inline-flex;
+	/* display: flex;  */
+	/* solo con flex, se mueven solos los elementos para achicarse segun la pagina html.  */
+}
+
+.item{
+	background-color: #ccc;
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+	font-size: 30px;
+}

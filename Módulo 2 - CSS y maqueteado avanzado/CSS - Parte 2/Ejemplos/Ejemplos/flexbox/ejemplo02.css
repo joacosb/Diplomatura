@@ -1,0 +1,19 @@
+.contenedor{
+	background-color: blue;
+	display: inline-flex;
+	/* por un lado controlo la direccion y por otro el desbordamiento.  */
+	/* flex-direction: row;  */
+	/* row es el predeterminado. */
+	/* flex-direction: row-reverse; */
+	flex-direction: column;
+	/*flex-direction: column-reverse;*/
+
+}
+
+.item{
+	background-color: #ccc;
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+	font-size: 30px;
+		}

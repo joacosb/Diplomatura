@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- aca esta el css en el mismo html para ahorrar archivos -->
+    <style type="text/css">
+     .caja
+        {
+            
+            margin:120px 150px;
+            
+            width:500px;
+            height:300px;
+            
+            background:#676470;
+            color:#fff;
+            
+            font-family:arial;
+            font-weight:900;
+            font-size:3.4em;
+            
+            /* text-align:center;
+            line-height:300px; . podemos hacerlo con estas dos lineas o con las cajas que estan a continuacion. */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            transition:all 0.3s ease;
+            /* La transicion aparece en la caja en lugar de en el caja:hover ya que aqui hace que la transicion vaya y vuelva. Para que ello pase se debe hacer desde la base del objeto */
+            /* Al usar el transition los colores aparecen paulatinamente */
+        }
+        
+        .caja:hover
+        {
+            box-shadow: inset 0 0 0 25px #53a7ea;
+            color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="caja">cajar</div>  
+</body>
+</html>

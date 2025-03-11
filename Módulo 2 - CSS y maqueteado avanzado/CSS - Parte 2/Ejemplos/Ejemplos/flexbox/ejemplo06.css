@@ -1,0 +1,26 @@
+.contenedor{
+	height: 500px;
+	background-color: blue;
+	display: flex;
+	align-items: flex-start;
+	/* align-items: flex-end; */
+	align-items: center;
+	/* align-items: stretch; */
+	/* align-items: baseline; */
+}
+/* Al padre le pongo un tipo de display y luego le pongo a los contenedores hijos sobre ambos ejes las preferencias que tenga */
+
+
+.item{
+	background-color: #ccc;
+	margin:10px;
+	font-size: 30px;
+	width: 100px;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* el align item es para eje y */
+}
+
+

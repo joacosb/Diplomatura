@@ -1,0 +1,43 @@
+/*
+      font-family: "Inter", serif;
+        font-family: "Roboto Condensed", serif;
+*/
+
+/* tmb se pueden importar fuentes usando @import url('www.ccdsfd') y copy paste a la direccion de google fonts. En este caso no es necesario tener una linea en el doc html*/
+
+#caja { /*esto es una regla*/
+    width: 300px;
+    height: 300px;
+    /*background-color: yellow;*/
+    margin: 100px;
+    padding: 20px;
+    /* esto es para que se separen del borde y poder redondear las puntas*/
+    /* con este codigo pegado desde un CSS Gradient webb puedo agregar un degrade copiando el codigo*/
+
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+
+    /*a continuacion para redondear los bordes */
+    border-radius: 20px 0 50px 10px;
+    box-shadow: 10px 20px 5px black;
+    border: 2px solid white;
+    /*eje X - eje Y - blur - color */
+}
+
+.texto {
+    background-color: orange;
+    column-count: 5;
+    column-gap: 60px;
+}
+
+.texto p { /*a todos los .texto que tengan la etiqueta p... */
+    margin: 0;
+}
+/* Esto que viene a continuacion son reglas*/
+h1{
+    font-family: "Inter", serif; /* esto genera que siempre los h1 tengan esta tipografia*/
+}
+
+h2{
+    font-family: "Roboto Condensed", serif;
+}

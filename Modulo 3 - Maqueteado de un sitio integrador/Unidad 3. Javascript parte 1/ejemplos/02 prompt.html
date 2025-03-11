@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title></title>
+</head>
+
+<body>
+  <script>
+    const nombre = prompt('Ingrese su nombre:', ''); // prompt > Cada vez que necesitamos ingresar un dato con esta función, aparece una ventana donde cargamos el valor. El mismo se guardara entre las comillas luego de la coma. 
+
+    const edad = prompt('Ingrese su edad:', '');
+// La comilla invertida sirve para la interpolacion de variables. COn esto, usando el formato ${marcador} se nos permite insertar un valor dinamico en la cadena. Todo lo que hay dentro de ${} es evaluado como JavaScript.
+    console.log(`Hola ${nombre}, asi que tienes  ${edad} años`)
+    document.write(`Hola ${nombre}, asi que tienes  ${edad} años`)
+
+  </script>
+</body>
+
+</html>

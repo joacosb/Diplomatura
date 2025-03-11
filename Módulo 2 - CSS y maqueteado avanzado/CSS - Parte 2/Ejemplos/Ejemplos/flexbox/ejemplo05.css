@@ -1,0 +1,21 @@
+.contenedor{
+	background-color: blue;
+	height: 500px;
+	display: inline-flex; 
+	/* El inline flex nos permite que se estiren las  cajas hacia abajo y queden parejas las que estan en la misma fila */
+	flex-wrap: wrap;
+	/*align-content: flex-start;*/
+	/*align-content: flex-end;*/
+	/*align-content: center;*/
+	/*align-content: stretch;*/
+	/*align-content: space-around;*/
+	/*align-content: space-between;*/
+}
+
+.item{
+	background-color: #ccc;
+	width: 25%;
+	margin: 10px;
+	font-size: 30px;
+}
+
