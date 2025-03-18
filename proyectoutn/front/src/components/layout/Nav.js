@@ -1,28 +1,21 @@
+import React from 'react';
+
 import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Nav = (props) => {
     return (
         <nav>
             <div>
-                <ul className="holder">
-                    <li key="home">
-                        <NavLink to="/" className={({ isActive }) => (isActive ? "activo" : "")}>
-                            Home
-                        </NavLink>
-                    </li>
-                    <li key="invertir">
-                        <NavLink to="/">Invertir</NavLink>
-                    </li>
-                    <li key="alquilar">
-                        <NavLink to="/">Alquilar</NavLink>
-                    </li>
-                    <li key="contacto">
-                        <NavLink to="/">Contacto</NavLink>
-                    </li>
+                <ul>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/nosotros">Nosotros</Link></li>
+                    <li><Link to="/novedades">Novedades</Link></li>
+                    <li><Link to="/contacto">Contacto</Link></li>
                 </ul>
             </div>
         </nav>
     );
-};
+}
 
 export default Nav;
