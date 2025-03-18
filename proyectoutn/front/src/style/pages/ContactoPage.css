@@ -1,5 +1,5 @@
 
-/* Inicio contacto */
+/* Inicio contacto */  
 .contacto {
     display: flex;
     gap: 24px;
@@ -9,12 +9,8 @@
     width: 100%;
 }
 
-.datos p {
+.datos p, .datos ul li {
     font-size: 14px;
-}
-
-.datos ul li {
-    font-size: 13px;
 }
 
 .formulario p {
@@ -22,28 +18,26 @@
 }
 
 .formulario p label {
-    min-width: 80px;
-    /* background-color: yellow; */
+    min-width: 100px;
+    font-weight: bold;
 }
 
 .formulario p input,
 .formulario p textarea {
     width: 100%;
-    background: #ddd;
+    background: #eee;
     border-radius: 5px;
-    border: 1px solid #999;
+    border: 1px solid #bbb;
     font-size: 14px;
-    padding: 6px 10px;
+    padding: 8px 10px;
 }
 
-.formulario p label{
+.formulario p label {
     display: flex;
     align-items: center;
 }
 
-/* Esto es una pseudoclase que se aplcia al hijo numero 4 de formulario . Lo que hace es que la etiqueta del forms no se mueva al medio sino que se quede arriba. */
 .formulario p:nth-child(4){
-    /* background:red */
     align-items: start;
 }
 
@@ -59,14 +53,12 @@
     font-size: 16px;
     padding: 6px 20px;
     width: auto;
-    position: relative;
-    left: 5rem;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .formulario input[type="submit"]:hover{
     background-color: #2e64a1;
 }
-
-
-/* Fin de contacto */
+/* Fin de contacto */ 

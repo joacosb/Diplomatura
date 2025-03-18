@@ -1,29 +1,25 @@
-/*para cada componente puedo poner un archivo css en lugar de decir e.g. inicio reglas para home o demas. */
-/* inicio home */
+/* Inicio homepage */
 .bienvenidos {
     width: 75%;
-    padding-right: 10px;
+    padding: 20px;
     box-sizing: border-box;
+    background-color: #dff0ff;
+    border-radius: 8px;
 }
 
 .testimonios {
     width: 25%;
-    /* background-color: yellow; */
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .columnas {
     display: flex;
     justify-content: space-between;
-}
-
-/* esto es para definir como son las p dentro de bienvenidos */
-.bienvenidos p {
-    font-size: 20px;
-}
-
-.testimonio {
-    background-color: #ccc;
-    padding: 16px;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 .testimonio .cita {
@@ -32,14 +28,18 @@
     font-size: 22px;
     background-color: yellow;
     display: block;
+    padding: 5px;
+    color: black;
+    border-radius: 5px;
 }
 
 .testimonio .autor {
-    font-size: 10px;
+    font-size: 12px;
     text-align: center;
     background-color: yellow;
     display: block;
     margin: 12px 0;
+    color: black;
+    border-radius: 5px;
 }
-
-/* fin home */
+/* Fin homepage */  

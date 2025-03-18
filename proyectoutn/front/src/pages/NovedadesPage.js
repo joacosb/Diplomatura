@@ -1,4 +1,4 @@
-import '../styles/pages/NovedadesPage.css';
+import '../style/pages/NovedadesPage.css';
 
 const Novedades = (props) => {
     return (

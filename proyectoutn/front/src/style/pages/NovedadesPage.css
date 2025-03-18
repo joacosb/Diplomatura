@@ -1,0 +1,18 @@
+/* Inicio novedades */
+.novedades {
+    padding: 20px;
+    background-color: #fdfdfd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.novedades h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.novedades p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+/* Fin novedades */
