@@ -3,6 +3,7 @@ import React from 'react';
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 
+
 const Nav = (props) => {
     return (
         <nav>
@@ -12,6 +13,8 @@ const Nav = (props) => {
                     <li><Link to="/nosotros">Nosotros</Link></li>
                     <li><Link to="/novedades">Novedades</Link></li>
                     <li><Link to="/contacto">Contacto</Link></li>
+                    <li><Link to="/servicios">Servicios</Link></li>
+
                 </ul>
             </div>
         </nav>

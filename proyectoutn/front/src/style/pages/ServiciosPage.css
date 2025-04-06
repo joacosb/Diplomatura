@@ -1,0 +1,10 @@
+.servicios-page .servicios-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .servicios-page h2 {
+    margin-bottom: 10px;
+  }
+  
