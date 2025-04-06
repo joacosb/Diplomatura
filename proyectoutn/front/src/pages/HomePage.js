@@ -1,9 +1,11 @@
 import "../style/pages/HomePage.css"
+import Servicio from "../components/Servicio";
+
 const HomePage = (props) => {
     return (
         <main className="holder">
             <div className="homeimg">
-            <img src="/images/img01.jpg" alt="avion" />
+                <img src="/images/img01.jpg" alt="avion" />
 
             </div>
             <div className="columnas">
@@ -26,6 +28,27 @@ const HomePage = (props) => {
                     </div>
                 </div>
             </div>
+            <div className="servicios">
+                <h2>Servicios</h2>
+                <div className="servicios-lista">
+                    <Servicio
+                        titulo="Transporte nacional"
+                        descripcion="Ofrecemos transporte de cargas en todo el país con unidades modernas y seguras."
+                        imagen="/images/servicio1.jpg"
+                    />
+                    <Servicio
+                        titulo="Distribución urbana"
+                        descripcion="Soluciones logísticas para entregas dentro de ciudades de forma rápida y eficiente."
+                        imagen="/images/servicio2.jpg"
+                    />
+                    <Servicio
+                        titulo="Transporte internacional"
+                        descripcion="Contamos con depósitos para el guardado seguro de mercadería."
+                        imagen="/images/servicio3.jpg"
+                    />
+                </div>
+            </div>
+
         </main>
     );
 }
