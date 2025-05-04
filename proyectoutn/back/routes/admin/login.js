@@ -4,9 +4,7 @@ const empleadosModel = require('../../models/empleadosModel');
 const md5 = require('md5');
 
 router.get('/', (req, res) => {
-  res.render('layout/admin/login', {
-    layout: 'layout/admin/layout'
-  });
+  res.render('login');
 });
 
 router.post('/', async (req, res) => {
@@ -18,12 +16,10 @@ router.post('/', async (req, res) => {
     req.session.nombre = empleado.nombre;
     res.redirect('/admin/novedades');
   } else {
-    res.render('layout/admin/login', {
-      layout: 'layout/admin/layout',
-      error: true
-    });
+    res.render('login', { error: true });
   }
 });
+
 
 router.get('/logout', (req, res) => {
   req.session.destroy();
@@ -31,3 +27,4 @@ router.get('/logout', (req, res) => {
 });
 
 module.exports = router;
+

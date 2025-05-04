@@ -6,8 +6,7 @@ router.get('/', (req, res) => {
     return res.redirect('/admin/login');
   }
 
-  res.render('layout/admin/novedades', {
-    layout: 'layout/admin/layout',
+  res.render('novedades', {
     nombre: req.session.nombre
   });
 });
