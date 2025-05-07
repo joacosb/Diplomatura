@@ -1,0 +1,15 @@
+<h2>Agregar novedad</h2>
+
+{{#if error}}
+  <p style="color:red;">{{message}}</p>
+{{/if}}
+
+<form action="/admin/novedades/agregar" method="post">
+  <p>Título</p>
+  <input type="text" name="titulo" required />
+
+  <p>Cuerpo</p>
+  <textarea name="cuerpo" required></textarea>
+
+  <button type="submit">Guardar</button>
+</form>

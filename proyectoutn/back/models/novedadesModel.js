@@ -6,8 +6,8 @@ async function getNovedades() {
 }
 
 async function addNovedad(data) {
-  const query = 'INSERT INTO novedades (titulo, subtitulo, cuerpo) VALUES ($1, $2, $3)';
-  await pool.query(query, [data.titulo, data.subtitulo, data.cuerpo]);
+  const query = 'INSERT INTO novedades (titulo, cuerpo) VALUES ($1, $2)';
+  await pool.query(query, [data.titulo, data.cuerpo]);
 }
 
 async function deleteNovedadById(id) {
@@ -20,8 +20,8 @@ async function getNovedadById(id) {
 }
 
 async function updateNovedadById(id, data) {
-  const query = 'UPDATE novedades SET titulo = $1, subtitulo = $2, cuerpo = $3 WHERE id = $4';
-  await pool.query(query, [data.titulo, data.subtitulo, data.cuerpo, id]);
+  const query = 'UPDATE novedades SET titulo = $1, cuerpo = $2 WHERE id = $3';
+  await pool.query(query, [data.titulo, data.cuerpo, id]);
 }
 
 module.exports = {

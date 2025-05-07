@@ -1,3 +1,27 @@
 <h2>Bienvenido {{nombre}}</h2>
-<p>Estás logueado correctamente.</p>
-<a href="/admin/login/logout">Cerrar sesión</a>
+
+<a href="/admin/novedades/agregar">Agregar novedad</a>
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Título</th>
+      <th><strong>Cuerpo</strong></th>  
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each novedades}}
+      <tr>
+        <td>{{this.id}}</td>
+        <td>{{this.titulo}}</td>
+        <td><strong>{{this.cuerpo}}</strong></td> 
+        <td>
+          <a href="/admin/novedades/editar/{{this.id}}">Editar</a> |
+          <a href="/admin/novedades/eliminar/{{this.id}}">Eliminar</a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
