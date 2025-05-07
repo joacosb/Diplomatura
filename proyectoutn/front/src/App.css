@@ -1,38 +1,101 @@
-.App {
+/* Títulos principales */
+h1, .titulo-principal {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Títulos secundarios */
+h2, .titulo-secundario {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.8rem;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Subtítulos o descripciones abajo del título */
+.subtitulo {
+  font-size: 1.2rem;
+  color: #6c757d;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Responsive (en pantallas chicas reduce tamaño) */
+@media (max-width: 576px) {
+  h1, .titulo-principal {
+    font-size: 2rem;
+  }
+
+  h2, .titulo-secundario {
+    font-size: 1.5rem;
+  }
+
+  .subtitulo {
+    font-size: 1rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Animación suave  */
+.fade-in {
+  animation: fadeIn 0.s ease-in-out both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.holder {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.app-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.main-content {
+  flex: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.section-fondo-suave {
+  background-color: #f6edea; /* Color suave en tono tierra claro */
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+
+.invertir-card {
+  min-height: 500px; /* Puedes ajustar a 550px o más si querés más altura */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

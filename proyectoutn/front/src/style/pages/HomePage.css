@@ -1,45 +1,66 @@
-/* Inicio homepage */
-.bienvenidos {
-    width: 75%;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: #dff0ff;
-    border-radius: 8px;
-}
-
-.testimonios {
-    width: 25%;
-    background-color: #f8f9fa;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.columnas {
+.hero-home {
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  
+  .hero-home .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-}
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .hero-home h1,
+  .hero-home p {
+    color: #fff;
+  }
+  
+  .hero-home .btn {
+    min-width: 120px;
+  }
 
-.testimonio .cita {
-    font-weight: bold;
-    font-style: italic;
-    font-size: 22px;
-    background-color: yellow;
-    display: block;
-    padding: 5px;
-    color: black;
-    border-radius: 5px;
-}
-
-.testimonio .autor {
-    font-size: 12px;
-    text-align: center;
-    background-color: yellow;
-    display: block;
-    margin: 12px 0;
-    color: black;
-    border-radius: 5px;
-}
-/* Fin homepage */  
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  
+  .overlay {
+    z-index: 1;
+  }
+  
+  .section-fondo-suave {
+    background: linear-gradient(to bottom right, #f3f7fb, #e8eef5);
+    padding: 3rem 0;
+    transition: background 0.3s ease;
+  }
+  
+  .section-fondo-suave h3,
+  .section-fondo-suave h4 {
+    color: #2e64aa;
+  }
+  
+  .section-fondo-suave .card {
+    background-color: white;
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .section-fondo-suave .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  }
+  
+  .section-fondo-suave .carousel-inner img {
+    border-radius: 8px;
+  }
+  
+  

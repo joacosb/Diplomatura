@@ -1,0 +1,15 @@
+.section-fondo-suave {
+    background: linear-gradient(to bottom, #f0f5fa, #e5ecf3);
+    min-height: 100vh; /* asegura que llega al footer */
+  }
+  
+  .invertir-card {
+    min-height: 500px; /* Puedes ajustar a 550px o más si querés más altura */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .mt-header-fix {
+    margin-top: 80px; /* Ajustalo si el header es más grande o más chico */
+  }
+  

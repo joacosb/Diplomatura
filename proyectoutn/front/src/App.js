@@ -1,33 +1,43 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/layout/Header";
-import Nav from "./components/layout/Nav";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HeaderNav from "./components/layout/HeaderNav";
 import Footer from "./components/layout/Footer";
-
-// ✅ Agregar importaciones de las páginas
 import HomePage from "./pages/HomePage";
-import NosotrosPage from "./pages/NosotrosPage";
-import NovedadesPage from "./pages/NovedadesPage";
+import InvertirPage from "./pages/InvertirPage";
+import AlquilarPage from "./pages/AlquilarPage";
 import ContactoPage from "./pages/ContactoPage";
-import ServiciosPage from "./pages/ServiciosPage";
 
-import "./App.css"; // Importar estilos globales
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
-const App = () => {
-    return (
-        <Router>
-            <Header />
-            <Nav />
-            <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/nosotros" element={<NosotrosPage />} />
-                <Route path="/novedades" element={<NovedadesPage />} />
-                <Route path="/contacto" element={<ContactoPage />} />
-                <Route path="/servicios" element={<ServiciosPage />} />
-            </Routes>
-            <Footer />
-        </Router>
-    );
-};
+import './App.css';
+
+function App() {
+  // Inicializar AOS una vez al montar la app
+  useEffect(() => {
+    AOS.init({
+      duration: 600,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  }, []);
+
+  return (
+    <BrowserRouter>
+      <div className="app-wrapper">
+        <HeaderNav />
+        <div className="main-content">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/invertir" element={<InvertirPage />} />
+            <Route path="/alquilar" element={<AlquilarPage />} />
+            <Route path="/contacto" element={<ContactoPage />} />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
+    </BrowserRouter>
+  );
+}
 
 export default App;
-
