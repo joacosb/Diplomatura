@@ -13,6 +13,8 @@ const HeaderNav = () => {
           <NavLink to="/invertir" className="nav-link">Invertir</NavLink>
           <NavLink to="/alquilar" className="nav-link">Alquilar</NavLink>
           <NavLink to="/contacto" className="nav-link">Contacto</NavLink>
+          <NavLink to="/login" className="nav-link">Iniciar sesión</NavLink>
+
         </nav>
       </div>
     </header>

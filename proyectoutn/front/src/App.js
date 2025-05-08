@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage";
 import InvertirPage from "./pages/InvertirPage";
 import AlquilarPage from "./pages/AlquilarPage";
 import ContactoPage from "./pages/ContactoPage";
+import LoginPage from './pages/LoginPage';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -32,6 +33,7 @@ function App() {
             <Route path="/invertir" element={<InvertirPage />} />
             <Route path="/alquilar" element={<AlquilarPage />} />
             <Route path="/contacto" element={<ContactoPage />} />
+            <Route path="/login" element={<LoginPage />} />
           </Routes>
         </div>
         <Footer />

@@ -1,12 +1,27 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../style/pages/HomePage.css";
+import axios from "axios";
 
 const HomePage = () => {
+  const [novedades, setNovedades] = useState([]);
+
   useEffect(() => {
     AOS.init({ duration: 500 });
+
+    const fetchNovedades = async () => {
+      try {
+        const res = await axios.get("http://localhost:3000/admin/novedades/api/listado");
+        setNovedades(res.data);
+      } catch (err) {
+        console.error("Error al obtener novedades:", err);
+      }
+    };
+
+    fetchNovedades();
   }, []);
+
 
   return (
     <main>
@@ -120,7 +135,6 @@ const HomePage = () => {
                   <div className="col-md-4">
                     <div className="card shadow">
                       <img src="/images/proyectos/yellowstone.jpg" className="card-img-top" alt="Yellowstone" />
-
                       <div className="card-body">
                         <h5 className="card-title fw-bold">Complejo Yellowstone</h5>
                         <p className="card-text">Departamentos equipados para alquiler corporativo.</p>
@@ -139,9 +153,34 @@ const HomePage = () => {
                 </div>
               </div>
 
-            </div> {/* fin col-10 */}
-          </div> {/* fin row */}
-        </div> {/* fin container-fluid */}
+              {/* Novedades */}
+              <div className="my-5">
+                <h3 className="text-center mb-4 fw-bold">Novedades</h3>
+                <div className="row justify-content-center g-4">
+                  {novedades.map((novedad) => (
+                    <div className="col-md-4" key={novedad.id}>
+                    <div className="card shadow h-100">
+                      {novedad.img_id && (
+                        <img
+                          src={novedad.img_id}
+                          alt={novedad.titulo}
+                          className="card-img-top"
+                          style={{ objectFit: 'cover', maxHeight: '200px' }}
+                        />
+                      )}
+                      <div className="card-body">
+                        <h5 className="card-title">{novedad.titulo}</h5>
+                        <p className="card-text">{novedad.cuerpo}</p>
+                      </div>
+                    </div>
+                  </div>
+                  ))}
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   );
